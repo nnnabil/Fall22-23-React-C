@@ -7,6 +7,8 @@ const Head = () => {
             <Link to="">Home</Link>
             <Link to="/profile">Profile</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/color">Color State</Link>
+            <Link to="/effect">Effect State</Link>
         </div>
     )
 }
