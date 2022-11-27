@@ -10,6 +10,7 @@ const Head = () => {
             <Link to="/color">Color State</Link>
             <Link to="/effect">Effect State</Link>
             <Link to="/allposts">All Posts</Link>
+            <Link to="/apiproducts">All Products</Link>
         </div>
     )
 }

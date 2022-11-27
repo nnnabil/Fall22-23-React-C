@@ -13,6 +13,7 @@ import ShowMessage from './Components/ShowMessage';
 import ColorState from './Components/ColorState';
 import EffectHookCheck from './Components/EffectHookCheck';
 import AllPosts from './Components/AllPosts';
+import APIProducts from './Components/APIProducts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
       <Route exact path='/color' element={<ColorState/>} />
       <Route exact path='/effect' element={<EffectHookCheck/>} />
       <Route exact path='/allposts' element={<AllPosts/>} />
+      <Route exact path='/apiproducts' element={<APIProducts/>} />
       </Routes>
       <Foot/>
     </Router>
