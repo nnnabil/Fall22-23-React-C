@@ -1,39 +1,33 @@
-import React, {useEffect, useState} from "react";
-import axios from "axios";
+import React, {useState, useEffect} from "react";
+import axiosConfig from './axiosConfig';
 
-const APIProducts = () => {
+const APIProducts = (props) =>{
+    const[products, setProducts] = useState([]);
 
-    const [products, setProducts] = useState ([]);
+    // alert(localStorage.getItem("user"));
+
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/api/products/list")
+        axiosConfig.get("products/list")
         .then(resp=>{
-            console.log(resp.data);
-            setProducts(resp.data);
-        }).catch(err=>{
-            console.log(err);
-        });
+        console.log(resp.data);
+        setProducts(resp.data);
+         }).catch(err=>{
+        console.log(err);
+    });
     },[]);
 
     return(
         <div>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-                {products.map(product=>(
-                    <tr key={product.id}>
-                        <td>{product.id}</td>
-                        <td>{product.name}</td>
-                        <td>{product.price}</td>
-                    </tr>
-                ))}
-            </table>
-          
+            <h1>All Products</h1>
+            <ul>
+                {
+                    products.map(p=>(
+                        <li key={p.id}>{p.name}</li>
+                    ))
+                }
+            </ul>
         </div>
-    );
-
+    )
 }
 export default APIProducts;
