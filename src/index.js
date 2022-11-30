@@ -15,6 +15,7 @@ import EffectHookCheck from './Components/EffectHookCheck';
 import AllPosts from './Components/AllPosts';
 import APIProducts from './Components/APIProducts';
 import Login from './Components/Login';
+import Logout from './Components/Logout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,6 +34,7 @@ root.render(
       <Route exact path='/allposts' element={<AllPosts/>} />
       <Route exact path='/apiproducts' element={<APIProducts/>} />
       <Route exact path='/login' element={<Login/>} />
+      <Route exact path='/logout' element={<Logout/>} />
       </Routes>
       <Foot/>
     </Router>

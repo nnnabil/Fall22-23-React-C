@@ -12,6 +12,7 @@ const Head = () => {
             <Link to="/allposts">All Posts</Link>
             <Link to="/apiproducts">All Products</Link>
             <Link to="/login">Login</Link>
+            <Link to="/logout">Log out</Link>
         </div>
     )
 }
